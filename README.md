@@ -137,3 +137,8 @@ int main()
        printf(" %d",fun());
         return 0;
     }
+    //o/p14 11 8 5 2
+
+
+
+
