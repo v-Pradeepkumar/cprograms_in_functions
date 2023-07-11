@@ -56,3 +56,66 @@ int main()
 
     return (a + b);
 }
+
+
+
+
+//function for call by reference
+#include <stdio.h>
+
+int fun(int*ptr1,int*ptr2)
+{
+    *ptr1 = 20 ; 
+    *ptr2 = 10 ;
+}
+
+int main()
+{
+    
+ int x = 10, y = 20 ;
+fun(&x, &y) ;
+printf("x = %d, y= %d",x,y);
+
+}
+
+
+
+
+//function for call by value
+#include <stdio.h>
+
+int fun(int x,int y)
+{
+    x = 20 ; 
+    y = 10 ;
+}
+
+int main()
+{
+    
+ int x = 10, y = 20 ;
+fun(x, y) ;
+printf("x = %d, y= %d",x,y);
+
+}
+
+
+
+
+//function for iteration(shift towards right) until 0 code
+#include <stdio.h>
+
+int main()
+{
+    int func(int num)
+    {
+         int count = 0 ;
+          
+         while(num)
+        { 
+             count++;
+              num >>=1 ; 
+        }
+        return (count);
+    }
+}
