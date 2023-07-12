@@ -142,3 +142,27 @@ int main()
 
 
 
+
+
+ // static(only the function scope is valid in its own block only ) and dynamic scoping(fun1 is having scope in main function also) here is the example of dynamic scoping 
+#include <stdio.h>
+
+int main() 
+    {
+      int a =10 ; 
+         a= fun1(a) ;
+        printf("%d",a);
+    }
+int fun1 (int a)
+              {
+                int b =5 ;
+                b = b+a ;
+                return b;
+             }
+
+
+
+
+
+
+
