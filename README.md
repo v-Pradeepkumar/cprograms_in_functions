@@ -292,3 +292,37 @@ printf("factorial of a number %d is %d ",n,fact(n)) ;
 
 //5 factorial is 120
 
+
+
+
+
+
+// write a program to print from 1 to 10 in such a way tat when number is odd,add1 and when number is even,subtract 1.output: 2 1 4 3 6 5 8 7 10 9 this is for indirect recursion [fun1() directly calling the fun()]
+#include <stdio.h>
+void odd() ;
+void  even() ;
+int n = 1 ;
+void odd(){
+    if(n<=10)
+    {
+        printf("%d ",n+1) ;
+    n++;
+    even() ;
+    }
+    return ;
+}
+void even()
+{
+    if(n<=10)
+    {
+        printf("%d ",n-1) ;
+        n++ ;
+        odd();
+}
+return;
+}
+int main()
+{
+    odd() ;
+}
+
