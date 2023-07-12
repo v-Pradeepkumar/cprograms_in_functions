@@ -374,3 +374,23 @@ int fun(int n){
     return 0;
 }
 
+
+
+
+//iterative program to calculate factorial(but recursion is best bcz lessline of code)
+#include <stdio.h>
+
+int fact(int n){
+    int res = 1 ;
+    while(n!=0)
+    {
+        res = res * n ;
+        n-- ;
+    }
+    return res;
+    }
+  int main()
+{
+    printf("%d",fact(6)) ;
+    return 0;
+}
