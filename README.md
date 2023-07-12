@@ -214,3 +214,35 @@ printf("%d",fun1());
 }
 
 //o/p 50
+
+
+
+
+
+
+// pseudocode parameters are passed by reference not by value
+#include <stdio.h>
+int a = 3 ;
+void n( x)
+{
+     x= x * a ;
+     print(x);
+}
+void m(y) 
+{
+   a = 1 ;
+   a = y- a ;
+   n(a);
+   print(a) ;
+}
+void main()
+{
+m(a);
+}
+
+//4 4
+
+
+
+
+
