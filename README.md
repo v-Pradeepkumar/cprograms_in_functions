@@ -165,4 +165,30 @@ int fun1 (int a)
 
 
 
+// static(only the function scope is valid in its own block only ) and dynamic scoping(fun1 is having scope in main function also). in those 2 cases we knows well aboit stack memory thi program for static scoping 
+
+#include <stdio.h>
+int fun1(int) ;
+int fun2(int) ;
+int a = 5 ;
+int main() 
+    {
+      int a =10 ; 
+         a= fun1(a) ;
+        printf("%d",a);
+    }
+int fun1 (int b)
+              {
+                b = b+10 ;
+                b = fun2(b) ;
+                return b;
+             }
+int fun2 (int b)
+                {
+                    int c ;
+                    c = b + a ; 
+                    return c ;
+                }
+
+
 
