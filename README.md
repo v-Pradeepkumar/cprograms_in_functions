@@ -165,7 +165,7 @@ int fun1 (int a)
 
 
 
-// static(only the function scope is valid in its own block only ) and dynamic scoping(fun1 is having scope in main function also). in those 2 cases we knows well aboit stack memory thi program for static scoping 
+// static(only the function scope is valid in its own block only ) and dynamic scoping(fun1 is having scope in main function also). in those 2 cases we knows well aboit stack memory thi program for static scoping . scoping is only for reuse the same variable with different values in different blocks
 
 #include <stdio.h>
 int fun1(int) ;
