@@ -355,4 +355,22 @@ int main()
 
 
 
+//a recursive function is said to be non tail recursive if the recursive call is not the last thing done by the function.after returning back,there is something left to evaluate o/p=3
+#include <stdio.h>
+
+int fun(int n){
+    if(n==1)
+     {
+         return 0 ;
+     }
+    else
+     {
+        return 1 + fun(n/2);
+      }
+    }
+  int main()
+{
+    printf("%d",fun(8)) ;
+    return 0;
+}
 
