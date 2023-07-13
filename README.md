@@ -394,3 +394,39 @@ int fact(int n){
     printf("%d",fact(6)) ;
     return 0;
 }
+
+
+
+
+
+
+
+
+
+// BASICS OF ARRAY declare- datatype array name [size] first index of an array=0 end of index should (n-1) using macro in array is best practice example; #define N 10
+   //int array [N];   -here is the example with macro(#define)
+#include <stdio.h>
+#define N 10
+
+int main() {
+    int a[N] , i ;
+    for(i=0;i<N;i++)
+    {
+     printf("enter the input for index %d:",i);
+     scanf("%d",&a[i]);
+    }
+    printf("\n array elements are as follows:\n");
+        for(i=0;i<N;i++)
+         {
+             printf(" %d",a[i]);
+         }
+
+    return 0;
+}
+//here arr[10]={1,2,3,[2]=5,[6]=8}={1,2,5,0,0,0,8,0,0,0}
+
+
+
+
+
+
