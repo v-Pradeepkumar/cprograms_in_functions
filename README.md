@@ -430,3 +430,193 @@ int main() {
 
 
 
+
+
+// print reversal order of a array
+#include <stdio.h>
+
+int main() {
+    int a [9] = {34, 56, 54, 32, 67, 89, 90, 32, 21};
+    int i;
+    //original order
+    for(i=0;i<9;i++)
+        {
+             printf("%d ", a[i]);
+         }
+              printf("\n");
+         for(i=8;i>=0;i--)
+             {
+                 printf("%d ", a[i]);
+              }
+
+    return 0;
+}
+//34 56 54 32 67 89 90 32 21 
+21 32 90 89 67 32 54 56 34 
+
+
+
+
+// repeated numbers are presented or not code in an array 
+#include <stdio.h>
+
+int main() {
+    int seen [10] = {0};
+    int N ; 
+    printf("Enter the Number: ");
+    scanf("%d",&N);
+    
+    int rem;
+         while(N>0)
+         {
+               rem = N%10 ; 
+                if(seen [rem] == 1)
+                 break;
+                 seen[rem] = 1;
+                 N = N/10;
+        }
+         if(N>0)
+        printf("yes");
+        else
+         printf("no");
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+// find how many numbers are presented in an array = total size of array/one element space 
+#include <stdio.h>
+
+int main() {
+    int seen [] = {100,50,200,100};
+    
+         printf("%d",sizeof(seen)/sizeof(seen[0]));
+
+    
+}
+
+
+
+
+
+
+
+// find the sum of row and column using loops
+#include <stdio.h>
+
+int main() {
+    int a [2][3] = {
+        {1, 3, 0},
+         {-1, 5, 9}
+    };
+    int i,j ;
+    int sum = 0 ;
+    printf("row total: ");
+    
+    for(i=0 ; i<2 ;i++ )
+    {
+        for(j=0 ; j<3 ; j++)
+        {
+            sum += a[i][j] ;
+        }
+        printf("%d ",sum) ;
+        sum = 0 ;
+    }
+                     
+    
+         printf("\n column total: ") ;
+         for(j=0 ; j<3 ;j++ )
+         {
+        for(i=0 ; i<2 ; i++)
+        {
+            sum += a[i][j] ;
+        }
+        printf("%d ",sum) ;
+        sum = 0 ;
+    }
+    return 0 ;
+}
+
+    
+
+
+// matrix multiplication resultant of matrix 1st matrix row and second matrix column num = resultant matri's row and column
+#include <stdio.h>
+#define MAX 50
+
+int main() {
+    int a [MAX][MAX] , b[MAX][MAX] , product[MAX][MAX] ;
+    int arows , acolumns , brows , bcolumns ;
+    int i, j, k ;
+    int sum ;
+    printf("Enter The rows and columns ofthe matrix a: ") ;
+    scanf("%d %d",&arows , &acolumns) ;
+    
+    
+    printf("Enter The elements ofthe matrix a:\n") ;
+    for(i = 0 ;i<arows ;i++)
+    {
+        for(j=0 ;j<acolumns ;j++)
+        {
+            scanf("%d ",&a[i][j]) ;
+        }
+    }
+    
+    
+    
+    printf("Enter The rows and columns ofthe matrix b: ") ;
+    scanf("%d %d ",brows , bcolumns) ;
+    if(brows !=acolumns)
+    {
+        printf("sorry! we cannot multiply the matrices a and b") ;
+    }
+    else
+    {
+        printf ("enter the elements of matrix b:\n") ;
+        for(i=0 ; i<brows ; i++)
+        {
+            for(j = 0 ; j < bcolumns ; j++)
+            { 
+                scanf("%d ",&b[i][j]) ;
+            }
+        }
+            
+        }
+        printf("\n") ;
+         for(i=0 ; i<arows ; i++)
+        {
+            for(j = 0 ; j < bcolumns ; j++)
+            { 
+                for(k = 0 ; k < brows ; k++)
+                {
+                    sum += a[i][k] *b[k][j] ;
+                    
+                }
+                product[i][j] = sum ;
+                sum = 0 ;
+    }
+        }
+        printf("resultant matrix\n") ;
+        for(i = 0 ; i < arows ; i++)
+        {
+            for(j = 0 ; j < bcolumns ; j++)
+            {
+                printf("%d ",product[i][j]) ;
+            }
+            printf("\n") ;
+        }
+        return 0 ;
+}
+
+
+
+
+
+
+
