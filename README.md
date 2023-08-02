@@ -710,3 +710,63 @@ int main() {
     return 0;
 }
 
+
+
+// find mid array element address using function    o/p = 3
+#include <stdio.h>
+
+int main() {
+   int a[] = {1, 2, 3, 4, 5};
+   int n = sizeof (a)/sizeof(a[0]);
+   int *mid = findMid(a, n);
+   
+    printf("%d",*mid);
+
+    return 0;
+}
+int *findMid(int a[], int n)
+{
+    return &a[n/2];
+}
+
+
+
+
+
+
+
+
+
+// example questions const addresss of i cant change error comes at o/p
+#include <stdio.h>
+void fun(const int *p)
+{
+    *p = 0;
+}
+int main() {
+  const int i = 10;
+    fun(&i);
+
+    return 0;
+}
+
+
+
+
+
+
+// o/p......the address of variable i is 0x7fff028fe414
+#include <stdio.h>
+
+int main() {
+    int i = 10;
+    int *p = &i ;
+    printf("the address of variable i is %p",p);
+
+    return 0;
+}
+
+
+
+
+
