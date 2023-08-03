@@ -847,4 +847,14 @@ int main() {
 
 
 
+// example for  pointer accessing the next element in an array
+//[array name represnt first element of array(a = &a[0])]
+#include <stdio.h>
 
+int main() {
+    int a[] = {11, 22, 36, 5, 2};
+   int *p = a ;
+    printf("%d",*(++p));
+
+    return 0;
+}
